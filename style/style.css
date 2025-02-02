@@ -8,6 +8,7 @@
 
 body {
     background-color: #212121;
+    padding-bottom: 30px;
 }
 
 nav {
@@ -121,4 +122,125 @@ nav {
 .custom-icon {
     width: 60px;
     height: 60px;
+}
+
+
+.projectsContainer {
+    margin-top: 100px !important;
+    margin-top: 15px;
+    padding: 0px 200px;
+    color: #0D7377;
+}
+
+.projectsContainer > h1 {
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.boxContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.projects {
+    width: 250px;
+    background-color: #323232;
+    padding: 10px 20px;
+}
+
+.github {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+
+}
+
+.github div {
+    background-color: rgba(33, 33, 33, 0.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.projectsTitle {
+    color: #14FFEC;
+    margin-top: 10px;
+}
+
+.projecstDescription {
+    margin-top: 20px;
+    font-size: small;
+}
+
+.projectsLanguages {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.projectsLanguages div {
+    padding: 3px 8px;
+    border-radius: 10px;
+    background-color: rgba(33, 33, 33, 0.5);
+}
+
+
+.hireContainer {
+    margin-top: 50px;
+    color: #0D7377;
+}
+
+.hireContainer h1 {
+    text-align: center;
+}
+
+.hireContainer > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hireBox {
+    padding: 20px;
+    width: 500px;
+    height: fit-content;
+    background-color: #323232;
+    display: flex;
+
+    flex-direction: column;
+}
+
+.hireBox > label:nth-of-type(1)
+{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.hireBox > label:nth-of-type(2)
+{
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.hireBox textarea {
+    max-width: 500px;
+    min-width: 500px;
+    max-height: 400px;
+    height: 80px;
+}
+
+.hireBox button {
+    align-self: center;
+    border-color: none;
+    border: none;
+    width: 200px;
+    margin-top: 20px;
+    padding: 5px 0;
+    border-radius: 20px;
+    background-color: #0D7377;
+}
+
+.hireBox h3 {
+    align-self:  center;
 }
