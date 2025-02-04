@@ -12,10 +12,20 @@ body {
 }
 
 nav {
+    position: sticky;
+  top: 0;
+  background: transparent;
+  padding: 15px 20px;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 30px;
+}
+
+.scrolled {
+    background-color: #32323280;
 }
 
 .nav-items > ul {
