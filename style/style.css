@@ -6,6 +6,18 @@
     font-style: normal;
 }
 
+*::-webkit-scrollbar {
+    width: 11px;
+  }
+
+ 
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #323232;
+    border-radius: 10px;
+   
+  }
+
 html {
     scroll-behavior: smooth;
 }

@@ -1,0 +1,51 @@
+@keyframes profile-moving {
+    from {
+        transform: translateY(-40px);
+    }
+    to {
+        transform: translatey(0);
+    }
+}
+
+@keyframes left-move {
+    from {
+        transform: translateX(100px);
+
+    }
+    to {
+        transform: translateX(0);
+    }
+
+}
+
+
+@keyframes right-move {
+    from {
+        transform: translateX(-100px);
+
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes blinking-name {
+    from {
+      color: #323232;
+        
+    }
+    to {
+     color:  #14FFEC;
+        
+    }
+}
+
+#profile {
+    animation: profile-moving 3.5s infinite alternate;
+}
+
+.myName {
+    animation: blinking-name 2.5s infinite;
+}
+
+

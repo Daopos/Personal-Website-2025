@@ -15,3 +15,40 @@ window.addEventListener("scroll", () => {
     });
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const hello = document.querySelector(".helloContainer > h1");
+  const skillBoxOdd = document.querySelectorAll(
+    ".programmingContainer:nth-of-type(odd)"
+  );
+  const skillBoxEven = document.querySelectorAll(
+    ".programmingContainer:nth-of-type(even)"
+  );
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Reset and restart animation
+          entry.target.style.animation = "none";
+          void entry.target.offsetWidth; // Force reflow
+
+          // Apply correct animation based on the element
+          if (entry.target === hello) {
+            entry.target.style.animation = "left-move 3s forwards";
+          } else if ([...skillBoxOdd].includes(entry.target)) {
+            entry.target.style.animation = "right-move 3s forwards"; // Odd elements animation
+          } else if ([...skillBoxEven].includes(entry.target)) {
+            entry.target.style.animation = "left-move 3s forwards"; // Even elements animation
+          }
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+
+  // Observe all elements
+  observer.observe(hello);
+  skillBoxOdd.forEach((box) => observer.observe(box));
+  skillBoxEven.forEach((box) => observer.observe(box));
+});
